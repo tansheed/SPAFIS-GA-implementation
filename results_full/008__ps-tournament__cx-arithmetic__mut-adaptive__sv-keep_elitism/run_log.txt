@@ -1,0 +1,82 @@
+
+===== [8/10] parent_selection=tournament | crossover=arithmetic | mutation=adaptive | survivor_selection=keep_elitism =====
+
+== Genetic algorithm ==
+Population size      : 30  (initial: uniform random inside the bounds + default parameters seeded)
+Generations          : 50
+Chromosome           : ['prototype_threshold', 'initial_spread', 'spread_scaling', 'learning_rate', 'rule_weight', 'attack_bias']
+    gene prototype_threshold    range [0.05, 0.95]
+    gene initial_spread         range [0.05, 2.0]
+    gene spread_scaling         range [0.2, 3.0]
+    gene learning_rate          range [0.001, 0.5]
+    gene rule_weight            range [0.0, 2.0]
+    gene attack_bias            range [0.0, 2.0]
+Parent selection     : Tournament Selection [PyGAD], K = 3, 15 parents per generation
+Crossover            : Arithmetic Crossover [custom], rate = 0.8
+Mutation             : Adaptive Mutation [PyGAD], per-gene probability = 0.1
+Survivor selection   : Elitist Survivor Selection [PyGAD], elites = 2, keep_parents = 2
+Random seed          : 42
+Generation   1: best = 0.9606  avg = 0.8445
+Generation   2: best = 0.9611  avg = 0.8899
+Generation   3: best = 0.9674  avg = 0.9186
+Generation   4: best = 0.9707  avg = 0.9491
+Generation   5: best = 0.9707  avg = 0.9453
+Generation   6: best = 0.9732  avg = 0.9456
+Generation   7: best = 0.9782  avg = 0.9383
+Generation   8: best = 0.9788  avg = 0.9460
+Generation   9: best = 0.9788  avg = 0.9479
+Generation  10: best = 0.9824  avg = 0.9610
+Generation  11: best = 0.9824  avg = 0.9576
+Generation  12: best = 0.9824  avg = 0.9683
+Generation  13: best = 0.9845  avg = 0.9627
+Generation  14: best = 0.9845  avg = 0.9644
+Generation  15: best = 0.9845  avg = 0.9625
+Generation  16: best = 0.9851  avg = 0.9670
+Generation  17: best = 0.9851  avg = 0.9667
+Generation  18: best = 0.9851  avg = 0.9588
+Generation  19: best = 0.9858  avg = 0.9784
+Generation  20: best = 0.9858  avg = 0.9723
+Generation  21: best = 0.9858  avg = 0.9690
+Generation  22: best = 0.9864  avg = 0.9642
+Generation  23: best = 0.9864  avg = 0.9652
+Generation  24: best = 0.9870  avg = 0.9760
+Generation  25: best = 0.9870  avg = 0.9792
+Generation  26: best = 0.9870  avg = 0.9742
+Generation  27: best = 0.9870  avg = 0.9651
+Generation  28: best = 0.9870  avg = 0.9796
+Generation  29: best = 0.9870  avg = 0.9689
+Generation  30: best = 0.9870  avg = 0.9792
+Generation  31: best = 0.9870  avg = 0.9834
+Generation  32: best = 0.9870  avg = 0.9719
+Generation  33: best = 0.9870  avg = 0.9792
+Generation  34: best = 0.9870  avg = 0.9776
+Generation  35: best = 0.9870  avg = 0.9652
+Generation  36: best = 0.9870  avg = 0.9797
+Generation  37: best = 0.9870  avg = 0.9811
+Generation  38: best = 0.9870  avg = 0.9684
+Generation  39: best = 0.9870  avg = 0.9796
+Generation  40: best = 0.9870  avg = 0.9753
+Generation  41: best = 0.9870  avg = 0.9759
+Generation  42: best = 0.9870  avg = 0.9744
+Generation  43: best = 0.9870  avg = 0.9809
+Generation  44: best = 0.9870  avg = 0.9805
+Generation  45: best = 0.9870  avg = 0.9839
+Generation  46: best = 0.9870  avg = 0.9809
+Generation  47: best = 0.9870  avg = 0.9814
+Generation  48: best = 0.9870  avg = 0.9742
+Generation  49: best = 0.9870  avg = 0.9757
+Generation  50: best = 0.9870  avg = 0.9815
+GA finished in 7992.5s; best validation fitness = 0.9870
+Best parameters: {"prototype_threshold": 0.4128, "initial_spread": 0.196, "spread_scaling": 0.4116, "learning_rate": 0.3436, "rule_weight": 1.2359, "attack_bias": 0.5557}
+
+Metric                    SPAFIS   GA-SPAFIS
+accuracy                  0.9499      0.9739
+precision                 0.9714      0.9598
+recall                    0.9195      0.9851
+f1                        0.9447      0.9723
+balanced_accuracy         0.9480      0.9746
+TP                          8086        8663
+TN                          9864        9739
+FP                           238         363
+FN                           708         131
+CONCLUSION: GA-SPAFIS missed FEWER attacks than default SPAFIS. False negatives 708 -> 131 (-577), false positives 238 -> 363 (+125), recall 0.9195 -> 0.9851, precision 0.9714 -> 0.9598. (single split/seed - repeat with several seeds before drawing conclusions)

@@ -1,0 +1,12 @@
+run_id,status,test_FN,test_FP,test_recall,test_precision,test_f1,val_fitness
+default SPAFIS,-,708,238,0.9195,0.9714,0.9447,0.9341
+001__ps-tournament__cx-arithmetic__mut-gaussian__sv-keep_elitism,ok,189,596,0.9785,0.9352,0.9564,0.9696
+002__ps-rank__cx-arithmetic__mut-gaussian__sv-keep_elitism,ok,341,146,0.9612,0.9830,0.9720,0.9692
+003__ps-sus__cx-arithmetic__mut-gaussian__sv-keep_elitism,ok,168,686,0.9809,0.9263,0.9528,0.9701
+004__ps-rws__cx-arithmetic__mut-gaussian__sv-keep_elitism,ok,224,383,0.9745,0.9572,0.9658,0.9716
+005__ps-tournament__cx-sbx__mut-gaussian__sv-keep_elitism,ok,122,330,0.9861,0.9633,0.9746,0.9855
+006__ps-tournament__cx-blx_alpha__mut-gaussian__sv-keep_elitism,ok,120,271,0.9864,0.9697,0.9780,0.9846
+007__ps-tournament__cx-arithmetic__mut-polynomial__sv-keep_elitism,ok,173,445,0.9803,0.9509,0.9654,0.9784
+008__ps-tournament__cx-arithmetic__mut-adaptive__sv-keep_elitism,ok,172,311,0.9804,0.9652,0.9728,0.9783
+009__ps-tournament__cx-arithmetic__mut-gaussian__sv-plus_selection,ok,371,355,0.9578,0.9596,0.9587,0.9640
+010__ps-tournament__cx-arithmetic__mut-gaussian__sv-crowding,ok,422,326,0.9520,0.9625,,

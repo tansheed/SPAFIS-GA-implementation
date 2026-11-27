@@ -1,0 +1,51 @@
+{
+  "operators": {
+    "parent_selection": {
+      "name": "rws",
+      "full_name": "Roulette Wheel Selection",
+      "pygad": true
+    },
+    "crossover": {
+      "name": "arithmetic",
+      "full_name": "Arithmetic Crossover",
+      "pygad": false
+    },
+    "mutation": {
+      "name": "gaussian",
+      "full_name": "Gaussian Mutation",
+      "pygad": false
+    },
+    "survivor_selection": {
+      "name": "keep_elitism",
+      "full_name": "Elitist Survivor Selection",
+      "pygad": true,
+      "parameter": "keep_elitism"
+    }
+  },
+  "note": "",
+  "seconds": 8267.9,
+  "fitness": {
+    "type": "fbeta",
+    "beta": 2.0,
+    "min_precision": 0.6,
+    "penalty": 2.0,
+    "weights": {
+      "f1": 0.4,
+      "balanced_accuracy": 0.3,
+      "recall": 0.3
+    }
+  },
+  "ga_settings": {
+    "population_size": 30,
+    "generations": 50,
+    "crossover_rate": 0.8,
+    "mutation_rate": 0.1,
+    "tournament_size": 3,
+    "elite_count": 2,
+    "keep_parents": 2,
+    "nsga3_num_divisions": 4,
+    "random_seed": 42,
+    "include_default_in_population": true,
+    "n_jobs": 1
+  }
+}

@@ -1,0 +1,80 @@
+
+{
+  "parent_selection": [
+    {
+      "name": "tournament",
+      "full_name": "Tournament Selection",
+      "pygad": true
+    },
+    {
+      "name": "rank",
+      "full_name": "Rank Selection",
+      "pygad": true
+    },
+    {
+      "name": "sus",
+      "full_name": "Stochastic Universal Sampling",
+      "pygad": true
+    },
+    {
+      "name": "rws",
+      "full_name": "Roulette Wheel Selection",
+      "pygad": true
+    }
+  ],
+
+  "crossover": [
+    {
+      "name": "sbx",
+      "full_name": "Simulated Binary Crossover",
+      "pygad": true
+    },
+    {
+      "name": "blx_alpha",
+      "full_name": "Blend Crossover (BLX-alpha)",
+      "pygad": false
+    },
+    {
+      "name": "arithmetic",
+      "full_name": "Arithmetic Crossover",
+      "pygad": false
+    }
+  ],
+
+  "mutation": [
+    {
+      "name": "gaussian",
+      "full_name": "Gaussian Mutation",
+      "pygad": false
+    },
+    {
+      "name": "polynomial",
+      "full_name": "Polynomial Mutation",
+      "pygad": true
+    },
+    {
+      "name": "adaptive",
+      "full_name": "Adaptive Mutation",
+      "pygad": true
+    }
+  ],
+
+  "survivor_selection": [
+    {
+      "name": "keep_elitism",
+      "full_name": "Elitist Survivor Selection",
+      "pygad": true,
+      "parameter": "keep_elitism"
+    },
+    {
+      "name": "plus_selection",
+      "full_name": "Parent-Offspring Combined Selection",
+      "pygad": false
+    },
+    {
+      "name": "crowding",
+      "full_name": "Crowding-Based Survivor Selection",
+      "pygad": false
+    }
+  ]
+}

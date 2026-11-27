@@ -1,0 +1,42 @@
+
+===== [4/10] parent_selection=rws | crossover=arithmetic | mutation=gaussian | survivor_selection=keep_elitism =====
+
+== Genetic algorithm ==
+Population size      : 12  (initial: uniform random inside the bounds + default parameters seeded)
+Generations          : 10
+Chromosome           : ['prototype_threshold', 'initial_spread', 'spread_scaling', 'learning_rate', 'rule_weight', 'attack_bias']
+    gene prototype_threshold    range [0.05, 0.95]
+    gene initial_spread         range [0.05, 2.0]
+    gene spread_scaling         range [0.2, 3.0]
+    gene learning_rate          range [0.001, 0.5]
+    gene rule_weight            range [0.0, 2.0]
+    gene attack_bias            range [0.0, 2.0]
+Parent selection     : Roulette Wheel Selection [PyGAD], K = 3, 6 parents per generation
+Crossover            : Arithmetic Crossover [custom], rate = 0.8
+Mutation             : Gaussian Mutation [custom], per-gene probability = 0.1
+Survivor selection   : Elitist Survivor Selection [PyGAD], elites = 2, keep_parents = 2
+Random seed          : 42
+Generation   1: best = 0.9341  avg = 0.8396
+Generation   2: best = 0.9582  avg = 0.8652
+Generation   3: best = 0.9590  avg = 0.9059
+Generation   4: best = 0.9590  avg = 0.9088
+Generation   5: best = 0.9655  avg = 0.8822
+Generation   6: best = 0.9655  avg = 0.8911
+Generation   7: best = 0.9668  avg = 0.9170
+Generation   8: best = 0.9716  avg = 0.9381
+Generation   9: best = 0.9716  avg = 0.9334
+Generation  10: best = 0.9716  avg = 0.9587
+GA finished in 50.6s; best validation fitness = 0.9716
+Best parameters: {"prototype_threshold": 0.3553, "initial_spread": 0.9892, "spread_scaling": 0.2, "learning_rate": 0.1588, "rule_weight": 1.0033, "attack_bias": 0.774}
+
+Metric                    SPAFIS   GA-SPAFIS
+accuracy                  0.9499      0.9679
+precision                 0.9714      0.9572
+recall                    0.9195      0.9745
+f1                        0.9447      0.9658
+balanced_accuracy         0.9480      0.9683
+TP                          8086        8570
+TN                          9864        9719
+FP                           238         383
+FN                           708         224
+CONCLUSION: GA-SPAFIS missed FEWER attacks than default SPAFIS. False negatives 708 -> 224 (-484), false positives 238 -> 383 (+145), recall 0.9195 -> 0.9745, precision 0.9714 -> 0.9572. (single split/seed - repeat with several seeds before drawing conclusions)

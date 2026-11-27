@@ -1,0 +1,21 @@
+{
+  "best_params": {
+    "prototype_threshold": 0.4208772297792257,
+    "initial_spread": 0.22141200931456134,
+    "spread_scaling": 0.3398506408396684,
+    "learning_rate": 0.4904154118375199,
+    "rule_weight": 2.0,
+    "attack_bias": 0.969382276562958
+  },
+  "default_params": {
+    "prototype_threshold": 0.5,
+    "initial_spread": 0.5,
+    "spread_scaling": 1.0,
+    "learning_rate": 0.1,
+    "rule_weight": 1.0,
+    "attack_bias": 0.0
+  },
+  "val_fitness_default": 0.9341135674035544,
+  "val_fitness_best": 0.9910294745835113,
+  "conclusion": "GA-SPAFIS missed FEWER attacks than default SPAFIS. False negatives 708 -> 117 (-591), false positives 238 -> 267 (+29), recall 0.9195 -> 0.9867, precision 0.9714 -> 0.9701. (single split/seed - repeat with several seeds before drawing conclusions)"
+}
