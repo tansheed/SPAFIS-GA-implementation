@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 src/__pycache__/
 archive/
 data/
 baseline/
 *.png
+=======
+src/__pycache__/
+archive/
+data/
+>>>>>>> origin/main
